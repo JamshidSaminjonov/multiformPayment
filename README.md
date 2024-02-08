@@ -1,0 +1,2 @@
+Bu multiformPayment bo'ldi.
+
