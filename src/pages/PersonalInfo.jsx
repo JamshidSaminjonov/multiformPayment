@@ -39,17 +39,15 @@ const PersonalInfo = () => {
 
   return (
     <div className="sm:basis-[60%] w-[300px] sm:w-[100%] h-[100%] sm:pr-[80px]">
-      <h1 className="mt-10 text-3xl font-[800] mb-2 text-primary-marineBlue">
-        Personal info
+      <h1 className="mt-10 text-3xl font-[800] mb-2 text-white border w-40 p-2 rounded-lg">
+        1-qadam
       </h1>
-      <p className="text-neutral-coolGray mb-6">
-        Please provide your name, email address, and phone number.
+      <p className="text-white mb-6">
+        Ma’lumotlaringizni kiriting va o'zingizga qulay tarifni tanlang
       </p>
       <form onSubmit={handleSumbit} className="flex flex-col">
         <div className="form-wrapper flex flex-col relative">
-          <label className="text-primary-marineBlue font-[500] mb-2">
-            Name
-          </label>
+          <label className="text-white font-[500] mb-2">Ism familyangiz</label>
           <input
             onChange={(e) => setName(e.target.value)}
             className={`${
@@ -67,28 +65,9 @@ const PersonalInfo = () => {
           >
             This field is required
           </span>
-          <label className="text-primary-marineBlue font-[500] mb-2">
-            Email Adress
-          </label>
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            className={`${
-              nameAlert
-                ? "focus:outline-primary-strawberryRed"
-                : "focus:outline-primary-marineBlue"
-            } mb-6 outline outline-1 outline-neutral-lightGray rounded-[4px] p-3 `}
-            type="email"
-            placeholder="e.g.stephenking@lorem.com"
-          />
-          <span
-            className={`${
-              emailAlert ? "inline" : "hidden"
-            } text-primary-strawberryRed font-[500] absolute top-[100px] right-[10px]`}
-          >
-            This field is required
-          </span>
-          <label className="text-primary-marineBlue font-[500] mb-2">
-            Phone Number
+
+          <label className="text-white font-[500] mb-2">
+            Telefon raqamingiz
           </label>
           <input
             onChange={(e) => setNumber(e.target.value)}
@@ -97,7 +76,7 @@ const PersonalInfo = () => {
                 ? "focus:outline-primary-strawberryRed"
                 : "focus:outline-primary-marineBlue"
             } mb-6 outline outline-1 outline-neutral-lightGray rounded-[4px] p-3 `}
-            type="text"
+            type="number"
             placeholder="e.g. +1 234 567 890"
           />
           <span
@@ -107,13 +86,33 @@ const PersonalInfo = () => {
           >
             This field is required
           </span>
+          <label className="text-white font-[500] mb-2">Tarif tanlash</label>
+          <select
+            onChange={(e) => setEmail(e.target.value)}
+            className={`${
+              nameAlert
+                ? "focus:outline-primary-strawberryRed"
+                : "focus:outline-primary-marineBlue"
+            } mb-6 outline outline-1 outline-neutral-lightGray rounded-[4px] p-3 `}
+          >
+            <option value="standart">Standart</option>
+            <option value="premium">Premium</option>
+            <option value="standart">Vip</option>
+          </select>
+          <span
+            className={`${
+              emailAlert ? "inline" : "hidden"
+            } text-primary-strawberryRed font-[500] absolute top-[100px] right-[10px]`}
+          >
+            This field is required
+          </span>
         </div>
         <div className="flex justify-end items-end py-[2px] mt-[120px] sm:mt-[26px]">
           <button
             className="bg-primary-marineBlue text-white border-0 rounded-md px-6 py-3 transition-all duration-300 hover:opacity-75"
             type="sumbit"
           >
-            Next Step
+            Davom etish
           </button>
         </div>
       </form>

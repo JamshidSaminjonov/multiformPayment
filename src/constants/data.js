@@ -1,28 +1,20 @@
 export const data = [
   {
     id: 1,
-    step: "step 1",
-    title: "your info",
+    step: "1-qadam",
+    title: "Malumotni Kiriting",
     linkTo: "/",
   },
   {
     id: 2,
-    step: "step 2",
-    title: "select plan",
+    step: "2-qadam",
+    title: "To'lov qiling",
     linkTo: "selectplan",
   },
   {
     id: 3,
-    step: "step 3",
-    title: "add-ons",
-    linkTo: "addons",
-  },
-  {
-    id: 4,
-    step: "step 4",
-    title: "summary",
-    linkTo: "summary",
+    step: "3-qadam",
+    title: "Tayyor",
+    linkTo: "thankyou",
   },
 ];
-
-
